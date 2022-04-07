@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Nastel - калькулятор" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "calculator-page--02.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +calculator02-01()
+    +calculator02-02()
+    +calculator02-03()
+
+block modals

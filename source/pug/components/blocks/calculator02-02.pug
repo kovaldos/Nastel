@@ -1,0 +1,85 @@
+mixin calculator02-02 ()
+	-
+		const data = {
+			title: "Калькулятор",
+			titleText: "Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.",
+			fieldset: {
+				marker04: "4. ",
+				title04: "Выберите тип остекления",
+				toggleRadio01: {
+					inputLabel: "Авангард (штапик внутри)",
+					inputType: "radio",
+					inputId: "warm-tilt-and-turn",
+					inputValue: "warm-tilt-and-turn",
+					inputName: "glazing-type",
+					inputChecked: true,
+				},
+				text01: "",
+				toggleRadio02: {
+					inputLabel: "Татпроф",
+					inputType: "radio",
+					inputId: "warm-sliding",
+					inputValue: "warm-sliding",
+					inputName: "glazing-type",
+
+				},
+				text02: "Внутри нет штапика, монтаж происходит с улицы с помощью промышленных альпинистов.",
+				toggleRadio03: {
+					inputLabel: "Отдельностоящее остекление",
+					inputType: "radio",
+					inputId: "cold-sliding",
+					inputValue: "cold-sliding",
+					inputName: "glazing-type",
+				},
+				text03: "Остекление, не связанное единым стояком. Происходит полный демонтаж старого остекления и монтируется новое.",
+				btnBack: {
+					type: "button",
+					text: "Назад",
+				},
+
+				btnFurther: {
+					type: "button",
+					text: "Далее",
+				},
+				help: "Трудности с заполнением заявки?",
+				helpBtn: {
+					text: "Заказать звонок",
+				}
+			}	
+		}
+	section.calculator
+		.container.calculator__container
+			h1.calculator__title=data.title
+			p.calculator__text=data.titleText
+			.calculator__wrapper
+				fieldset(form="calculatorForm").calculator__form-fieldset
+					legend.calculator__form-title
+						span.calculator__form-title-marker=data.fieldset.marker04
+						span.calculator__form-title-inner=data.fieldset.title04
+					.calculator__form-toggles
+						.calculator__form-toggles-item
+							.calculator__form-toggles-item-pic 
+								+picture("content", "glazing-type-img-04", "jpg", "100%", "100%", "Фото остекления балкона")
+							+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio
+							.calculator__form-toggles-item-text
+								span=data.fieldset.text01
+						.calculator__form-toggles-item
+							.calculator__form-toggles-item-pic 
+								+picture("content", "glazing-type-img-05", "jpg", "100%", "100%", "Фото остекления балкона")
+							+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+							.calculator__form-toggles-item-text
+								span=data.fieldset.text02
+						.calculator__form-toggles-item
+							.calculator__form-toggles-item-pic 
+								+picture("content", "glazing-type-img-06", "jpg", "100%", "100%", "Фото остекления балкона")
+							+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+							.calculator__form-toggles-item-text
+								span=data.fieldset.text03
+					.calculator__form-row
+						.calculator__form-btns
+							+btn(data.fieldset.btnBack)(data-submit).calculator__form-btn.calculator__form-btn--back
+							+btn(data.fieldset.btnFurther)(data-submit).calculator__form-btn.calculator__form-btn--further
+						.calculator__form-help
+							span.calculator__form-help-text=data.fieldset.help
+							+btn(data.fieldset.helpBtn).calculator__form-help-btn
+							+icon("icon-phone", 40, 40).calculator__form-help-btn-icon

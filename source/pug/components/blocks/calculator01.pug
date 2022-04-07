@@ -1,0 +1,97 @@
+mixin calculator01 ()
+	-
+		const data = {
+			title: "Калькулятор",
+			titleText: "Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.",
+			form: {
+				marker01: "1. ",
+				title01: "Укажите размер пола на балконе (мм)",
+				input01: {
+					inputLabel: "Длина",
+					inputType: "text",
+					inputPlaceholder: 3000,
+					inputError: "Укажите длину",
+					inputId: "length",
+					inputName: "Длина",
+					inputMinLength: 3,
+					inputMaxLength: 5,
+				},
+				input02: {
+					inputLabel: "Ширина",
+					inputType: "text",
+					inputPlaceholder: 1200,
+					inputError: "Укажите ширину",
+					inputId: "width",
+					inputName: "Ширина",
+					inputMinLength: 3,
+					inputMaxLength: 4,
+				},
+				marker02: "2. ",
+				title02: "Выберите тип дома",
+				toggleRadio01: {
+					inputLabel: "Новостройка (дома, начиная с 2010 года)",
+					inputType: "radio",
+					inputId: "new-building",
+					inputValue: "new-building",
+					inputName: "building-age",
+				},
+				toggleRadio02: {
+					inputLabel: "Старый дом (дома старше 2010 года)",
+					inputType: "radio",
+					inputId: "old-building",
+					inputValue: "old-building",
+					inputName: "building-age",
+					inputChecked: "checked",
+				},
+				marker03: "3. ",
+				title03: "Выберите тип работ",
+				toggleCheck01: {
+					inputLabel: "Остекление балкона",
+					inputType: "checkbox",
+					inputId: "glazing",
+					inputValue: "Остекление балкона",
+					inputName: "type-of-work",
+					inputChecked: true,
+				},
+				toggleCheck02: {
+					inputLabel: "Отделка балкона",
+					inputType: "checkbox",
+					inputId: "balcony-decoration",
+					inputValue: "Отделка балкона",
+					inputName: "type-of-work",
+				},
+				btnFurther: {
+					type: "button",
+					text: "Далее",
+				},
+			}	
+		}
+	section.calculator
+		.container.calculator__container
+			h1.calculator__title=data.title
+			p.calculator__text=data.titleText
+			.calculator__wrapper 
+				.calculator__form(data-validate)
+					form.calculator__form-form#calculatorForm(action="#")
+						fieldset(form="calculatorForm").calculator__form-fieldset
+							legend.calculator__form-title
+								span.calculator__form-title-marker=data.form.marker01 
+								span.calculator__form-title-inner=data.form.title01
+							.calculator__form-inputs
+								+custom-input(data.form.input01)(data-validate-type="text" data-limitations="digit" data-size="length")
+								+custom-input(data.form.input02)(data-validate-type="text" data-limitations="digit" data-size="width")
+						fieldset(form="calculatorForm").calculator__form-fieldset
+							legend.calculator__form-title
+								span.calculator__form-title-marker=data.form.marker02
+								span.calculator__form-title-inner=data.form.title02
+							+custom-toggle(data.form.toggleRadio01).custom-toggle--radio(data-building-age="new")
+							+custom-toggle(data.form.toggleRadio02).custom-toggle--radio(data-building-age="old")
+						fieldset(form="calculatorForm").calculator__form-fieldset
+							legend.calculator__form-title
+								span.calculator__form-title-marker=data.form.marker03
+								span.calculator__form-title-inner=data.form.title03
+							+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
+							+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
+							+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
+				.calculator__form-pic
+					+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")
