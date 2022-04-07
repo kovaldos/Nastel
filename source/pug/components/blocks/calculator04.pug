@@ -87,29 +87,29 @@ mixin calculator04 ()
 				},
 			}	
 		}
-	section.calculator
-		.container.calculator__container
-			h1.calculator__title=data.title
-			p.calculator__text=data.titleText
-			.calculator__wrapper 
-				.calculator__form(data-validate)
-					form.calculator__form-form#calculatorForm
-						fieldset(form="calculatorForm").calculator__form-fieldset
-							legend.calculator__form-title
-								span.calculator__form-title-marker.calculator__form-title-marker--orange=data.fieldset.marker06 
-								span.calculator__form-title-inner.calculator__form-title-inner--orange=data.fieldset.title01
-								span.calculator__form-title-inner=data.fieldset.title0102
-							+custom-toggle(data.fieldset.toggleCheck01).custom-toggle--checkbox
-							+custom-toggle(data.fieldset.toggleCheck02).custom-toggle--checkbox
-							+custom-toggle(data.fieldset.toggleCheck03).custom-toggle--checkbox
-							+custom-toggle(data.fieldset.toggleCheck04).custom-toggle--checkbox
-							+custom-toggle(data.fieldset.toggleCheck05).custom-toggle--checkbox
-							.calculator__form-inputs.calculator__form-inputs--grid
-								+custom-input(data.fieldset.input01)(data-validate-type="text")
-								+custom-input(data.fieldset.input02)(data-validate-type="text")
-								+custom-input(data.fieldset.input03)(data-validate-type="text")
-								+custom-input(data.fieldset.input04)(data-validate-type="text")
-							+custom-toggle(data.fieldset.toggleCheck06).custom-toggle--checkbox
-							+btn(data.fieldset.btnFurther)(data-submit).calculator__form-btn.calculator__form-btn--further
-				.calculator__form-pic
-					+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")
+	//- section.calculator
+	.container.calculator__container
+		//- h1.calculator__title=data.title
+		//- p.calculator__text=data.titleText
+		.calculator__wrapper.is-hidden(data-screen="screen04")
+			.calculator__form(data-validate)
+				form.calculator__form-form#calculatorForm
+					fieldset(form="calculatorForm").calculator__form-fieldset
+						legend.calculator__form-title
+							span.calculator__form-title-marker.calculator__form-title-marker--orange=data.fieldset.marker06 
+							span.calculator__form-title-inner.calculator__form-title-inner--orange=data.fieldset.title01
+							span.calculator__form-title-inner=data.fieldset.title0102
+						+custom-toggle(data.fieldset.toggleCheck01).custom-toggle--checkbox
+						+custom-toggle(data.fieldset.toggleCheck02).custom-toggle--checkbox
+						+custom-toggle(data.fieldset.toggleCheck03).custom-toggle--checkbox
+						+custom-toggle(data.fieldset.toggleCheck04).custom-toggle--checkbox
+						+custom-toggle(data.fieldset.toggleCheck05).custom-toggle--checkbox
+						.calculator__form-inputs.calculator__form-inputs--grid
+							+custom-input(data.fieldset.input01)(data-validate-type="text")
+							+custom-input(data.fieldset.input02)(data-validate-type="text")
+							+custom-input(data.fieldset.input03)(data-validate-type="text")
+							+custom-input(data.fieldset.input04)(data-validate-type="text")
+						+custom-toggle(data.fieldset.toggleCheck06).custom-toggle--checkbox
+						+btn(data.fieldset.btnFurther)(data-submit).calculator__form-btn.calculator__form-btn--further
+			.calculator__form-pic
+				+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")

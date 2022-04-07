@@ -49,7 +49,7 @@ mixin calculator01 ()
 					inputLabel: "Остекление балкона",
 					inputType: "checkbox",
 					inputId: "glazing",
-					inputValue: "Остекление балкона",
+					inputValue: "glazing",
 					inputName: "type-of-work",
 					inputChecked: true,
 				},
@@ -57,7 +57,7 @@ mixin calculator01 ()
 					inputLabel: "Отделка балкона",
 					inputType: "checkbox",
 					inputId: "balcony-decoration",
-					inputValue: "Отделка балкона",
+					inputValue: "balcony-decoration",
 					inputName: "type-of-work",
 				},
 				btnFurther: {
@@ -66,32 +66,32 @@ mixin calculator01 ()
 				},
 			}	
 		}
-	section.calculator
-		.container.calculator__container
-			h1.calculator__title=data.title
-			p.calculator__text=data.titleText
-			.calculator__wrapper 
-				.calculator__form(data-validate)
-					form.calculator__form-form#calculatorForm(action="#")
-						fieldset(form="calculatorForm").calculator__form-fieldset
-							legend.calculator__form-title
-								span.calculator__form-title-marker=data.form.marker01 
-								span.calculator__form-title-inner=data.form.title01
-							.calculator__form-inputs
-								+custom-input(data.form.input01)(data-validate-type="text" data-limitations="digit" data-size="length")
-								+custom-input(data.form.input02)(data-validate-type="text" data-limitations="digit" data-size="width")
-						fieldset(form="calculatorForm").calculator__form-fieldset
-							legend.calculator__form-title
-								span.calculator__form-title-marker=data.form.marker02
-								span.calculator__form-title-inner=data.form.title02
-							+custom-toggle(data.form.toggleRadio01).custom-toggle--radio(data-building-age="new")
-							+custom-toggle(data.form.toggleRadio02).custom-toggle--radio(data-building-age="old")
-						fieldset(form="calculatorForm").calculator__form-fieldset
-							legend.calculator__form-title
-								span.calculator__form-title-marker=data.form.marker03
-								span.calculator__form-title-inner=data.form.title03
-							+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
-							+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
-							+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
-				.calculator__form-pic
-					+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")
+
+	.container.calculator__container
+		h1.calculator__title=data.title
+		p.calculator__text=data.titleText
+		.calculator__wrapper(data-screen="screen01")
+			.calculator__form(data-validate)
+				form.calculator__form-form#calculatorForm(action="#")
+					fieldset(form="calculatorForm").calculator__form-fieldset
+						legend.calculator__form-title
+							span.calculator__form-title-marker=data.form.marker01 
+							span.calculator__form-title-inner=data.form.title01
+						.calculator__form-inputs
+							+custom-input(data.form.input01)(data-validate-type="text" data-limitations="digit" data-size="length")
+							+custom-input(data.form.input02)(data-validate-type="text" data-limitations="digit" data-size="width")
+					fieldset(form="calculatorForm").calculator__form-fieldset
+						legend.calculator__form-title
+							span.calculator__form-title-marker=data.form.marker02
+							span.calculator__form-title-inner=data.form.title02
+						+custom-toggle(data.form.toggleRadio01).custom-toggle--radio(data-building-age="new")
+						+custom-toggle(data.form.toggleRadio02).custom-toggle--radio(data-building-age="old")
+					fieldset(form="calculatorForm").calculator__form-fieldset
+						legend.calculator__form-title
+							span.calculator__form-title-marker=data.form.marker03
+							span.calculator__form-title-inner=data.form.title03
+						+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
+						+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
+						+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
+			.calculator__form-pic
+				+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")

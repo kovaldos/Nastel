@@ -47,39 +47,39 @@ mixin calculator02-02 ()
 				}
 			}	
 		}
-	section.calculator
-		.container.calculator__container
-			h1.calculator__title=data.title
-			p.calculator__text=data.titleText
-			.calculator__wrapper
-				fieldset(form="calculatorForm").calculator__form-fieldset
-					legend.calculator__form-title
-						span.calculator__form-title-marker=data.fieldset.marker04
-						span.calculator__form-title-inner=data.fieldset.title04
-					.calculator__form-toggles
-						.calculator__form-toggles-item
-							.calculator__form-toggles-item-pic 
-								+picture("content", "glazing-type-img-04", "jpg", "100%", "100%", "Фото остекления балкона")
-							+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio
-							.calculator__form-toggles-item-text
-								span=data.fieldset.text01
-						.calculator__form-toggles-item
-							.calculator__form-toggles-item-pic 
-								+picture("content", "glazing-type-img-05", "jpg", "100%", "100%", "Фото остекления балкона")
-							+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
-							.calculator__form-toggles-item-text
-								span=data.fieldset.text02
-						.calculator__form-toggles-item
-							.calculator__form-toggles-item-pic 
-								+picture("content", "glazing-type-img-06", "jpg", "100%", "100%", "Фото остекления балкона")
-							+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
-							.calculator__form-toggles-item-text
-								span=data.fieldset.text03
-					.calculator__form-row
-						.calculator__form-btns
-							+btn(data.fieldset.btnBack)(data-submit).calculator__form-btn.calculator__form-btn--back
-							+btn(data.fieldset.btnFurther)(data-submit).calculator__form-btn.calculator__form-btn--further
-						.calculator__form-help
-							span.calculator__form-help-text=data.fieldset.help
-							+btn(data.fieldset.helpBtn).calculator__form-help-btn
-							+icon("icon-phone", 40, 40).calculator__form-help-btn-icon
+	//- section.calculator
+	.container.calculator__container
+		//- h1.calculator__title=data.title
+		//- p.calculator__text=data.titleText
+		.calculator__wrapper.is-hidden(data-screen="screen0202")
+			fieldset(form="calculatorForm").calculator__form-fieldset
+				legend.calculator__form-title
+					span.calculator__form-title-marker=data.fieldset.marker04
+					span.calculator__form-title-inner=data.fieldset.title04
+				.calculator__form-toggles
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic 
+							+picture("content", "glazing-type-img-04", "jpg", "100%", "100%", "Фото остекления балкона")
+						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio
+						.calculator__form-toggles-item-text
+							span=data.fieldset.text01
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic 
+							+picture("content", "glazing-type-img-05", "jpg", "100%", "100%", "Фото остекления балкона")
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+						.calculator__form-toggles-item-text
+							span=data.fieldset.text02
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic 
+							+picture("content", "glazing-type-img-06", "jpg", "100%", "100%", "Фото остекления балкона")
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+						.calculator__form-toggles-item-text
+							span=data.fieldset.text03
+				.calculator__form-row
+					.calculator__form-btns
+						+btn(data.fieldset.btnBack)(data-submit="back0202").calculator__form-btn.calculator__form-btn--back
+						+btn(data.fieldset.btnFurther)(data-submit="further0202").calculator__form-btn.calculator__form-btn--further
+					.calculator__form-help
+						span.calculator__form-help-text=data.fieldset.help
+						+btn(data.fieldset.helpBtn).calculator__form-help-btn
+						+icon("icon-phone", 40, 40).calculator__form-help-btn-icon
