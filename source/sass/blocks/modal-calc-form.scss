@@ -1,0 +1,97 @@
+.modal {
+	&--calc-form {
+		.modal {
+			&__content {
+				max-width: 330px;
+				padding: 40px 45px;
+				@include vp-374 {
+					padding: 15px;
+				}
+			}
+		}
+		fieldset {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+		legend {
+			display: inline-block;
+			font-size: 1em;
+			line-height: 1.333em;
+			color: $color-charcoal;
+			margin-bottom: 40px;
+		}
+		.custom-input {
+			width: 100%;
+			max-width: unset;
+			padding: 0;
+			margin-bottom: 1.5em;
+			label {
+				input {
+					margin: 0;
+				}
+			}
+			&__error {
+				font-size: 14px;
+				bottom: -25px;
+				@include vp-374 {
+					bottom: -20px;
+				}
+			}
+		}
+		.custom-toggle {
+			width: 100%;
+			max-width: unset;
+			&--checkbox {
+				.custom-toggle__icon {
+					width: 18px;
+					height: 18px;
+					border-radius: 2px;
+				}
+				input {
+					&:checked + {
+						.custom-toggle__icon {
+							border: 2px solid $color-cadet-blue;
+							&::before {
+								background-color: $color-transparent;
+								content: url(../img/svg/icon-check.svg);
+								top: -1px;
+								left: 1px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.modal-calc-form {
+			&__btn-wrapper {
+				position: relative;
+			}
+			&__btn {
+				&--submit {
+					margin: 0;
+					padding: 10px 45px 9px 14px;
+					justify-content: flex-start;
+					align-items: center;
+					border-radius: 5px;
+					background-color: $color-dark-orange;
+					font-weight: 600;
+					font-size: 1.111em;
+					line-height: 1.55em;
+					width: 100%;
+					max-width: 240px;
+				}
+				&-icon {
+					position: absolute;
+					left: auto;
+					right: 5px;
+					top: auto;
+					bottom: 5px;
+					color: $color-default-white;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+}

@@ -52,13 +52,13 @@ mixin calculator02-03 ()
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "tech-type-img-01", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio
+						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio.radio-check
 						.calculator__form-toggles-item-text
 							span=data.fieldset.text01
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "tech-type-img-02", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio.radio-check
 						.calculator__form-toggles-item-text
 							span=data.fieldset.text02
 				.calculator__form-row
@@ -67,5 +67,5 @@ mixin calculator02-03 ()
 						+btn(data.fieldset.btnFurther)(data-submit="further0203").calculator__form-btn.calculator__form-btn--further
 					.calculator__form-help
 						span.calculator__form-help-text=data.fieldset.help
-						+btn(data.fieldset.helpBtn).calculator__form-help-btn
+						+btn(data.fieldset.helpBtn).calculator__form-help-btn(data-open-modal="modal-calc-form")
 						+icon("icon-phone", 40, 40).calculator__form-help-btn-icon

@@ -21,6 +21,7 @@
               <form class="calculator__form-form" id="calculatorForm">
                 <fieldset class="calculator__form-fieldset" form="calculatorForm">
                   <legend class="calculator__form-title"><span class="calculator__form-title-marker calculator__form-title-marker--orange">6. </span><span class="calculator__form-title-inner calculator__form-title-inner--orange">Данные собраны! </span><span class="calculator__form-title-inner">Мы подготовим и отправим расчёт в течение рабочего дня.</span></legend>
+                  <p class="calculator__form-sub-title">Где Вам удобнее получить расчёт?</p>
                   <div class="custom-toggle custom-toggle--checkbox">
                     <label>
                       <input type="checkbox" id="calc-form-connection-email" value="email" name="connection" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Электронная почта</span>
@@ -61,21 +62,22 @@
                     </div>
                     <div class="custom-input" data-validate-type="text">
                       <label>
+                        <input type="text" id="calc-form-address" minlength="3" placeholder="Адрес / название ЖК">
+                      </label>
+                      <div class="custom-input__error">Укажите aдрес или название ЖК</div>
+                    </div>
+                    <div class="custom-input">
+                      <label>
                         <input type="text" id="calc-form-comment" minlength="5" placeholder="Комментарий">
                       </label>
                     </div>
-                    <div class="custom-input" data-validate-type="text">
-                      <label>
-                        <input type="text">
-                      </label>
-                    </div>
                   </div>
-                  <div class="custom-toggle custom-toggle--checkbox">
+                  <div class="custom-toggle custom-toggle--checkbox calculator__form-agreement" data-validate-type="checkbox">
                     <label>
-                      <input type="checkbox" id="calc-form-agreement" value="calc-form-agreement" name="calc-form-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
+                      <input type="checkbox" id="calc-form-agreement" value="calc-form-agreement" name="calc-form-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
                     </label>
                   </div>
-                  <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit>Далее</button>
+                  <button class="btn calculator__form-btn calculator__form-btn--submit" type="submit">Получить расчет</button>
                 </fieldset>
               </form>
             </div>

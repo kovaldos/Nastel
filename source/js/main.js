@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import {calcApp} from './modules/calc-app';
+import {initTestWebp} from './modules/test-webp';
 // import {initCalculatorApp} from './modules/init-calculator-app';
 
 // ---------------------------------
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     // initCalculatorApp();
     calcApp();
+    initTestWebp();
   });
 });
 

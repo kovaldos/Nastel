@@ -12,7 +12,7 @@ mixin calculator02-01 ()
 					inputId: "warm-tilt-and-turn",
 					inputValue: "warm-tilt-and-turn",
 					inputName: "glazing-type",
-					inputChecked: true,
+					inputChecked: "checked",
 				},
 				toggleRadio02: {
 					inputLabel: "Тёплое раздвижное остекление",
@@ -57,20 +57,20 @@ mixin calculator02-01 ()
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "glazing-type-img-01", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio
+						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio.radio-check
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "glazing-type-img-02", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio.radio-check
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "glazing-type-img-03", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio03).custom-toggle--radio
+						+custom-toggle(data.fieldset.toggleRadio03).custom-toggle--radio.radio-check
 				.calculator__form-row
 					.calculator__form-btns
 						+btn(data.fieldset.btnBack)(data-submit="back0201").calculator__form-btn.calculator__form-btn--back
 						+btn(data.fieldset.btnFurther)(data-submit="further0201").calculator__form-btn.calculator__form-btn--further
 					.calculator__form-help
 						span.calculator__form-help-text=data.fieldset.help
-						+btn(data.fieldset.helpBtn).calculator__form-help-btn
+						+btn(data.fieldset.helpBtn).calculator__form-help-btn(data-open-modal="modal-calc-form")
 						+icon("icon-phone", 40, 40).calculator__form-help-btn-icon

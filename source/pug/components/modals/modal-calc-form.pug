@@ -1,0 +1,43 @@
+mixin modal-calc-form()
+	-
+		const data = {
+			title: "Оставьте свои контактные данные, и мы перезвоним Вам в течение дня.",
+			form: {
+				input01: {
+					inputType: "text",
+					inputPlaceholder: "Имя",
+					inputError: "Укажите имя",
+					inputId: "modal-calc-form-name",
+				},
+				input02: {
+					inputType: "text",
+					inputPlaceholder: "Номер телефона",
+					inputError: "Укажите номер телефона",
+					inputId: "modal-calc-form-tel",
+				},
+				toggleCheck: {
+					inputLabel: "Согласие на обработку персональных данных",
+					inputType: "checkbox",
+					inputId: "modal-calc-form-agreement",
+					inputValue: "modal-calc-form-agreement",
+					inputName: "modal-calc-form-agreement",
+					inputChecked: true,
+				},
+				btn: {
+					tag: "button",
+					type: "submit",
+					text: "Заказать звонок",
+				},
+			},
+		}
+	.modal-calc-form
+		.modal-calc-form__wrapper(data-validate)
+			form(action="#")
+				fieldset 
+					legend=data.title 
+					+custom-input(data.form.input01)(data-validate-type="text")
+					+custom-input(data.form.input02)(data-validate-type="text")
+					+custom-toggle(data.form.toggleCheck).custom-toggle--checkbox.modal-calc-form__agreement(data-validate-type="checkbox")
+					.modal-calc-form__btn-wrapper
+						+btn(data.form.btn).modal-calc-form__btn.modal-calc-form__btn--submit
+						+icon("icon-phone", 40, 40).modal-calc-form__btn-icon
