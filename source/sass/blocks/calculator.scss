@@ -44,6 +44,7 @@
 	}
 	&__form {
 		width: 100%;
+		max-width: 510px;
 		&-fieldset {
 			border: 0;
 			padding: 0;
@@ -81,6 +82,12 @@
 			color: $color-cadet-blue;
 			line-height: 1.333em;
 			margin: 3.333em 0 1.666em 0;
+			@include vp-767 {
+				margin: 2em 0;
+			}
+			@include vp-424 {
+				margin: 1.5em 0;
+			}
 
 		}
 
@@ -121,9 +128,11 @@
 					}
 				}
 				&__error {
-					font-size: 14px;
-					right: 5px;
-					bottom: -25px;
+					font-size: 13px;
+					right: auto;
+					left: 5px;
+					bottom: -22px;
+					white-space: nowrap;
 				}
 			}
 			&--grid {
@@ -134,12 +143,13 @@
 				position: relative;
 				z-index: 1;
 				margin-top: 2.5em;
+				@include vp-424 {
+					grid-template-columns: auto;
+
+				}
 				.custom-input:not(:last-of-type) {
 					margin-right: 0;
 				}
-				// .custom-input__error {
-				// 	font-size: 14px;
-				// }
 			}
 		}
 		&-agreement {
@@ -189,7 +199,7 @@
 			}
 			img {
 				object-fit: cover;
-				max-height: 100%;
+				height: 100%;
 			}
 		}
 		&-toggles {
@@ -312,7 +322,7 @@
 		label {
 			display: inline-flex;
 			align-items: flex-start;
-			padding-left: 27px;
+			padding-left: 40px;
 			width: 100%;
 			@include vp-424 {
 				align-items: center;
@@ -358,6 +368,7 @@
 			&.radio-check {
 				.custom-toggle__icon {
 					flex: 0 0 30px;
+					width: 30px;
 					height: 30px;
 				}
 				input {

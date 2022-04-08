@@ -1401,6 +1401,7 @@ button,
 
 .calculator__form {
   width: 100%;
+  max-width: 510px;
 }
 
 .calculator__form-fieldset {
@@ -1485,9 +1486,11 @@ button,
 }
 
 .calculator__form-inputs .custom-input__error {
-  font-size: 14px;
-  right: 5px;
-  bottom: -25px;
+  font-size: 13px;
+  right: auto;
+  left: 5px;
+  bottom: -22px;
+  white-space: nowrap;
 }
 
 .calculator__form-inputs--grid {
@@ -1552,7 +1555,7 @@ button,
 .calculator__form-pic img {
   -o-object-fit: cover;
   object-fit: cover;
-  max-height: 100%;
+  height: 100%;
 }
 
 .calculator__form-toggles {
@@ -1686,7 +1689,7 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding-left: 27px;
+  padding-left: 40px;
   width: 100%;
 }
 
@@ -1735,6 +1738,7 @@ button,
   -webkit-box-flex: 0;
   -ms-flex: 0 0 30px;
   flex: 0 0 30px;
+  width: 30px;
   height: 30px;
 }
 
@@ -1826,6 +1830,10 @@ button,
     width: 100%;
   }
 
+  .calculator__form-sub-title {
+    margin: 2em 0;
+  }
+
   .calculator__form-inputs .custom-input label input {
     width: 100%;
   }
@@ -1868,6 +1876,10 @@ button,
     padding: 20px;
   }
 
+  .calculator__form-sub-title {
+    margin: 1.5em 0;
+  }
+
   .calculator__form-inputs--flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1878,6 +1890,11 @@ button,
   .calculator__form-inputs .custom-input {
     max-width: 100%;
     margin-bottom: 10px;
+  }
+
+  .calculator__form-inputs--grid {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
   }
 
   .calculator__form-btn {
