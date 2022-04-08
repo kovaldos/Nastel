@@ -54,15 +54,17 @@
                   </fieldset>
                   <fieldset class="calculator__form-fieldset" form="calculatorForm">
                     <legend class="calculator__form-title"><span class="calculator__form-title-marker">3. </span><span class="calculator__form-title-inner">Выберите тип работ</span></legend>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="glazing" value="glazing" name="type-of-work" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Остекление балкона</span>
-                      </label>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="balcony-decoration" value="balcony-decoration" name="type-of-work"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отделка балкона</span>
-                      </label>
+                    <div class="calculator__form-toggle-group" data-validate-type="toggle-group">
+                      <div class="custom-toggle custom-toggle--checkbox">
+                        <label>
+                          <input type="checkbox" id="glazing" value="glazing" name="type-of-work" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Остекление балкона</span>
+                        </label>
+                      </div>
+                      <div class="custom-toggle custom-toggle--checkbox">
+                        <label>
+                          <input type="checkbox" id="balcony-decoration" value="balcony-decoration" name="type-of-work"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отделка балкона</span>
+                        </label>
+                      </div>
                     </div>
                     <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further01">Далее</button>
                   </fieldset>
@@ -88,7 +90,7 @@
                     </div>
                     <div class="custom-toggle custom-toggle--radio radio-check">
                       <label>
-                        <input type="radio" id="warm-tilt-and-turn" value="warm-tilt-and-turn" name="glazing-type" checked="checked"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое поворотно откидное остекление</span>
+                        <input type="radio" id="warm-tilt-and-turn" value="warm-tilt-and-turn" name="glazing-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое поворотно откидное остекление</span>
                       </label>
                     </div>
                   </div>
@@ -381,7 +383,7 @@
                         <label>
                           <input type="text" id="calc-form-address" minlength="3" placeholder="Адрес / название ЖК">
                         </label>
-                        <div class="custom-input__error">Укажите aдрес или название ЖК</div>
+                        <div class="custom-input__error">Укажите адрес или название ЖК</div>
                       </div>
                       <div class="custom-input">
                         <label>

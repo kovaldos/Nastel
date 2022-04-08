@@ -90,8 +90,9 @@ mixin calculator01 ()
 						legend.calculator__form-title
 							span.calculator__form-title-marker=data.form.marker03
 							span.calculator__form-title-inner=data.form.title03
-						+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
-						+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
+						.calculator__form-toggle-group(data-validate-type="toggle-group")
+							+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
+							+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
 						+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
 			.calculator__form-pic
 				+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")

@@ -88,7 +88,6 @@
 			@include vp-424 {
 				margin: 1.5em 0;
 			}
-
 		}
 
 		&-inputs {
@@ -108,6 +107,7 @@
 				}
 				&:not(:last-of-type) {
 					margin-right: 1.666em;
+					@include vp-424;
 				}
 				&__label {
 					font-size: 0.888em;
@@ -131,7 +131,7 @@
 					font-size: 13px;
 					right: auto;
 					left: 5px;
-					bottom: -22px;
+					bottom: -20px;
 					white-space: nowrap;
 				}
 			}
@@ -145,7 +145,6 @@
 				margin-top: 2.5em;
 				@include vp-424 {
 					grid-template-columns: auto;
-
 				}
 				.custom-input:not(:last-of-type) {
 					margin-right: 0;
@@ -157,7 +156,7 @@
 		}
 		&-btn {
 			width: 100%;
-			min-height: 50px;
+			height: 50px;
 			max-width: 240px;
 			margin: 2.5em 0 0;
 			padding: 10px 20px 9px;
@@ -341,10 +340,10 @@
 			height: 20px;
 			border: 2px solid rgba($color-cadet-blue, 0.54);
 			border-radius: 2px;
-			&::before {
-				width: 20px;
-				height: 20px;
-			}
+			// &::before {
+			// 	width: 20px;
+			// 	height: 20px;
+			// }
 		}
 		&--radio {
 			.custom-toggle__icon {
@@ -389,17 +388,16 @@
 			input {
 				&:checked + {
 					.custom-toggle__icon {
-						border: 4px solid $color-cadet-blue;
+						border: 2px solid $color-cadet-blue;
 						&::before {
 							background-color: $color-transparent;
 							content: url(../img/svg/icon-check.svg);
-							top: 6px;
-							left: 8px;
+							top: 0;
+							left: 2px;
 						}
 					}
 				}
 			}
 		}
-
 	}
 }

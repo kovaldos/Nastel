@@ -40,15 +40,15 @@ const calcApp = () => {
           dataWidth.closest('.custom-input').classList.add('is-invalid');
         } else if (dataBuildingType === 'old-building') {
           setTimeout(() => {
-            data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
-            console.log(data);
+            // data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
+            // console.log(data);
             removeScreen(screen01);
             showScreen(screen0201);
           }, 200);
         } else {
           setTimeout(() => {
-            data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
-            console.log(data);
+            // data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
+            // console.log(data);
             removeScreen(screen01);
             showScreen(screen0202);
           }, 200);
