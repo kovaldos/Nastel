@@ -36,7 +36,7 @@ mixin modal-calc-form()
 				fieldset 
 					legend=data.title 
 					+custom-input(data.form.input01)(data-validate-type="text")
-					+custom-input(data.form.input02)(data-validate-type="text")
+					+custom-input(data.form.input02)(data-validate-type="phone")
 					+custom-toggle(data.form.toggleCheck).custom-toggle--checkbox.modal-calc-form__agreement(data-validate-type="checkbox")
 					.modal-calc-form__btn-wrapper
 						+btn(data.form.btn).modal-calc-form__btn.modal-calc-form__btn--submit
