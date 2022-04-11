@@ -760,6 +760,10 @@ button,
   pointer-events: auto;
 }
 
+.modal--calc-form .modal__overlay {
+  background-color: rgba(103, 119, 135, 0.6);
+}
+
 .modal--calc-form .modal__content {
   max-width: 330px;
   padding: 40px 45px;

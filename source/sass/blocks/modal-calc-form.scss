@@ -1,6 +1,9 @@
 .modal {
 	&--calc-form {
 		.modal {
+			&__overlay {
+				background-color: rgba($color-lynch, 0.6);
+			}
 			&__content {
 				max-width: 330px;
 				padding: 40px 45px;
