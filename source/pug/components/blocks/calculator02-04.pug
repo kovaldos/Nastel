@@ -1,0 +1,71 @@
+mixin calculator02-04 ()
+	-
+		const data = {
+			title: "Калькулятор",
+			titleText: "Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.",
+			fieldset: {
+				marker05: "5. ",
+				title05: "Выберите технологию",
+				toggleRadio01: {
+					inputLabel: "В рамах",
+					inputType: "radio",
+					inputId: "Framed",
+					inputValue: "Framed",
+					inputName: "technology-type",
+					inputChecked: true,
+				},
+				text01: "Демонтируются створки и стёкла, остаётся скелет старого остекления, в образовавшиеся проёмы устанавливаются рамы со стеклопакетами. Происходит сужение световых проёмов.",
+				toggleRadio02: {
+					inputLabel: "В стеклопакетах",
+					inputType: "radio",
+					inputId: "double-glazed",
+					inputValue: "double-glazed",
+					inputName: "technology-type",
+
+				},
+				text02: "Демонтируются створки и стёкла, остаётся скелет старого остекления, на места глухих стёкол устанавливаются стеклопакеты, на места створок — рамы со стеклопакетом. Ширина световых проёмов не изменяется (кроме секций со створкой).",
+				btnBack: {
+					type: "button",
+					text: "Назад",
+				},
+
+				btnFurther: {
+					type: "button",
+					text: "Далее",
+				},
+				help: "Трудности с заполнением заявки?",
+				helpBtn: {
+					text: "Заказать звонок",
+				}
+			}	
+		}
+	//- section.calculator
+	.container.calculator__container
+		//- h1.calculator__title=data.title
+		//- p.calculator__text=data.titleText
+		.calculator__wrapper.is-hidden(data-screen="screen0204")
+			fieldset(form="calculatorForm").calculator__form-fieldset
+				legend.calculator__form-title
+					span.calculator__form-title-marker=data.fieldset.marker05
+					span.calculator__form-title-inner=data.fieldset.title05
+				.calculator__form-toggles
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic 
+							+picture("content", "tech-type-img-03", "jpg", "100%", "100%", "Фото остекления балкона")
+						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio.radio-check
+						.calculator__form-toggles-item-text
+							span=data.fieldset.text01
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic 
+							+picture("content", "tech-type-img-04", "jpg", "100%", "100%", "Фото остекления балкона")
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio.radio-check
+						.calculator__form-toggles-item-text
+							span=data.fieldset.text02
+				.calculator__form-row
+					.calculator__form-btns
+						+btn(data.fieldset.btnBack)(data-submit="back0204").calculator__form-btn.calculator__form-btn--back
+						+btn(data.fieldset.btnFurther)(data-submit="further0204").calculator__form-btn.calculator__form-btn--further
+					.calculator__form-help
+						span.calculator__form-help-text=data.fieldset.help
+						+btn(data.fieldset.helpBtn).calculator__form-help-btn(data-open-modal="modal-calc-form")
+						+icon("icon-phone", 40, 40).calculator__form-help-btn-icon

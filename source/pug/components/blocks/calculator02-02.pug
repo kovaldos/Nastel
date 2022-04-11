@@ -9,8 +9,8 @@ mixin calculator02-02 ()
 				toggleRadio01: {
 					inputLabel: "Авангард (штапик внутри)",
 					inputType: "radio",
-					inputId: "warm-tilt-and-turn",
-					inputValue: "warm-tilt-and-turn",
+					inputId: "avangard",
+					inputValue: "avangard",
 					inputName: "glazing-type",
 					inputChecked: true,
 				},
@@ -18,8 +18,8 @@ mixin calculator02-02 ()
 				toggleRadio02: {
 					inputLabel: "Татпроф",
 					inputType: "radio",
-					inputId: "warm-sliding",
-					inputValue: "warm-sliding",
+					inputId: "tatprof",
+					inputValue: "tatprof",
 					inputName: "glazing-type",
 
 				},
@@ -27,8 +27,8 @@ mixin calculator02-02 ()
 				toggleRadio03: {
 					inputLabel: "Отдельностоящее остекление",
 					inputType: "radio",
-					inputId: "cold-sliding",
-					inputValue: "cold-sliding",
+					inputId: "free-standing-glazing",
+					inputValue: "free-standing-glazing",
 					inputName: "glazing-type",
 				},
 				text03: "Остекление, не связанное единым стояком. Происходит полный демонтаж старого остекления и монтируется новое.",
@@ -72,7 +72,7 @@ mixin calculator02-02 ()
 					.calculator__form-toggles-item
 						.calculator__form-toggles-item-pic 
 							+picture("content", "glazing-type-img-06", "jpg", "100%", "100%", "Фото остекления балкона")
-						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio.radio-check
+						+custom-toggle(data.fieldset.toggleRadio03).custom-toggle--radio.radio-check
 						.calculator__form-toggles-item-text
 							span=data.fieldset.text03
 				.calculator__form-row

@@ -1,0 +1,113 @@
+mixin calculator03-01 ()
+	-
+		const data = {
+			title: "Калькулятор",
+			titleText: "Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.",
+			fieldset: {
+				marker05: "5. ",
+				title05: "Выберите расположение остекления",
+				toggleRadio01: {
+					inputLabel: "Прямое, от пола до потолка",
+					inputType: "radio",
+					inputId: "straight-floor-to-ceiling",
+					inputValue: "Прямое, от пола до потолка",
+					inputName: "location-type",
+					inputChecked: true,
+				},
+				toggleRadio02: {
+					inputLabel: "Прямое, от пояса до потолка",
+					inputType: "radio",
+					inputId: "straight-waist-to-ceiling",
+					inputValue: "Прямое, от пояса до потолка",
+					inputName: "location-type",
+
+				},
+				toggleRadio03: {
+					inputLabel: "Г-образное, от пола до потолка",
+					inputType: "radio",
+					inputId: "L-type-floor-to-ceiling",
+					inputValue: "Г-образное, от пола до потолка",
+					inputName: "location-type",
+
+				},
+				toggleRadio04: {
+					inputLabel: "Г-образное, от пояса до потолка",
+					inputType: "radio",
+					inputId: "L-type-waist-to-ceiling",
+					inputValue: "Г-образное, от пояса до потолка",
+					inputName: "location-type",
+
+				},
+				toggleRadio05: {
+					inputLabel: "П-образное, от пола до потолка",
+					inputType: "radio",
+					inputId: "U-type-floor-to-ceiling",
+					inputValue: "П-образное, от пола до потолка",
+					inputName: "location-type",
+
+				},
+				toggleRadio06: {
+					inputLabel: "П-образное, от пояса до потолка",
+					inputType: "radio",
+					inputId: "U-type-waist-to-ceiling",
+					inputValue: "П-образное, от пояса до потолка",
+					inputName: "location-type",
+
+				},
+				btnBack: {
+					type: "button",
+					text: "Назад",
+				},
+
+				btnFurther: {
+					type: "button",
+					text: "Далее",
+				},
+				help: "Трудности с заполнением заявки?",
+				helpBtn: {
+					text: "Заказать звонок",
+				}
+			}	
+		}
+	//- section.calculator
+	.container.calculator__container
+		//- h1.calculator__title=data.title
+		//- p.calculator__text=data.titleText
+		.calculator__wrapper.is-hidden(data-screen="screen0301")
+			fieldset(form="calculatorForm").calculator__form-fieldset
+				legend.calculator__form-title
+					span.calculator__form-title-marker=data.fieldset.marker05
+					span.calculator__form-title-inner=data.fieldset.title05
+				.calculator__form-toggles
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-01", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio01).custom-toggle--radio.radio-check
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-02", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio02).custom-toggle--radio.radio-check
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-03", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio03).custom-toggle--radio.radio-check
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-04", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio04).custom-toggle--radio.radio-check
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-05", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio05).custom-toggle--radio.radio-check
+					.calculator__form-toggles-item
+						.calculator__form-toggles-item-pic.calculator__form-toggles-item-pic--scheme 
+							+picture("content", "location-type-img-06", "jpg", "100%", "100%", "Схема остекления, расположения створок")
+						+custom-toggle(data.fieldset.toggleRadio06).custom-toggle--radio.radio-check
+				.calculator__form-row
+					.calculator__form-btns
+						+btn(data.fieldset.btnBack)(data-submit="back0301").calculator__form-btn.calculator__form-btn--back
+						+btn(data.fieldset.btnFurther)(data-submit="further0301").calculator__form-btn.calculator__form-btn--further
+					.calculator__form-help
+						span.calculator__form-help-text=data.fieldset.help
+						+btn(data.fieldset.helpBtn).calculator__form-help-btn(data-open-modal="modal-calc-form")
+						+icon("icon-phone", 40, 40).calculator__form-help-btn-icon

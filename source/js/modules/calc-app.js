@@ -9,7 +9,9 @@ const calcApp = () => {
     const screen0201 = calcBlock.querySelector('[data-screen="screen0201"]');
     const screen0202 = calcBlock.querySelector('[data-screen="screen0202"]');
     const screen0203 = calcBlock.querySelector('[data-screen="screen0203"]');
-    const screen03 = calcBlock.querySelector('[data-screen="screen03"]');
+    const screen0204 = calcBlock.querySelector('[data-screen="screen0204"]');
+    const screen0301 = calcBlock.querySelector('[data-screen="screen0301"]');
+    const screen0302 = calcBlock.querySelector('[data-screen="screen0302"]');
     const screen04 = calcBlock.querySelector('[data-screen="screen04"]');
     calcBlock.addEventListener('click', (event) => {
       let target = event.target;
@@ -69,25 +71,41 @@ const calcApp = () => {
       if (target.dataset.submit === 'further0201') {
         setTimeout(() => {
           removeScreen(screen0201);
-          screen03.querySelector('.calculator__form-title-marker').innerText = '5. ';
-          showScreen(screen03);
+          screen0301.querySelector('.calculator__form-title-marker').innerText = '5. ';
+          showScreen(screen0301);
         }, 200);
       }
-      if (target.dataset.submit === 'back03') {
+      if (target.dataset.submit === 'back0301') {
         setTimeout(() => {
-          removeScreen(screen03);
-          if (screen03.querySelector('.calculator__form-title-marker').innerText === '6. ') {
-
+          removeScreen(screen0301);
+          if (screen0301.querySelector('.calculator__form-title-marker').innerText === '6. ') {
             showScreen(screen0203);
           } else {
             showScreen(screen0201);
           }
         }, 200);
       }
+      if (target.dataset.submit === 'back0302') {
+        setTimeout(() => {
+          removeScreen(screen0302);
+          if (screen0302.querySelector('.calculator__form-title-marker').innerText === '6. ') {
+            showScreen(screen0204);
+          } else {
+            showScreen(screen0202);
+          }
+        }, 200);
+      }
       if (target.dataset.submit === 'further0202') {
         setTimeout(() => {
           removeScreen(screen0202);
-          showScreen(screen0203);
+          if (calcBlock.querySelector('#tatprof').checked === true) {
+            showScreen(screen0204);
+          } else if (calcBlock.querySelector('#free-standing-glazing').checked === true) {
+            screen0302.querySelector('.calculator__form-title-marker').innerText = '5. ';
+            showScreen(screen0302);
+          } else {
+            showScreen(screen0203);
+          }
         }, 200);
       }
       if (target.dataset.submit === 'back0203') {
@@ -96,17 +114,42 @@ const calcApp = () => {
           showScreen(screen0202);
         }, 200);
       }
+      if (target.dataset.submit === 'back0204') {
+        setTimeout(() => {
+          removeScreen(screen0204);
+          showScreen(screen0202);
+        }, 200);
+      }
       if (target.dataset.submit === 'further0203') {
         setTimeout(() => {
           removeScreen(screen0203);
-          screen03.querySelector('.calculator__form-title-marker').innerText = '6. ';
-          showScreen(screen03);
+          screen0301.querySelector('.calculator__form-title-marker').innerText = '6. ';
+          showScreen(screen0301);
         }, 200);
       }
-      if (target.dataset.submit === 'further03') {
+      if (target.dataset.submit === 'further0204') {
         setTimeout(() => {
-          removeScreen(screen03);
-          if (screen03.querySelector('.calculator__form-title-marker').innerText === '6. ') {
+          removeScreen(screen0204);
+          screen0302.querySelector('.calculator__form-title-marker').innerText = '6. ';
+          showScreen(screen0302);
+        }, 200);
+      }
+      if (target.dataset.submit === 'further0301') {
+        setTimeout(() => {
+          removeScreen(screen0301);
+          if (screen0301.querySelector('.calculator__form-title-marker').innerText === '6. ') {
+            screen04.querySelector('.calculator__form-title-marker').innerText = '7. ';
+            showScreen(screen04);
+          } else {
+            screen04.querySelector('.calculator__form-title-marker').innerText = '6. ';
+            showScreen(screen04);
+          }
+        }, 200);
+      }
+      if (target.dataset.submit === 'further0302') {
+        setTimeout(() => {
+          removeScreen(screen0302);
+          if (screen0302.querySelector('.calculator__form-title-marker').innerText === '6. ') {
             screen04.querySelector('.calculator__form-title-marker').innerText = '7. ';
             showScreen(screen04);
           } else {
