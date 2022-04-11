@@ -1621,6 +1621,7 @@ button,
 .calculator__form-toggles-item-pic {
   max-width: 316px;
   height: 190px;
+  border: 1px solid #e5e5e5;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.06em;
@@ -1631,6 +1632,18 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.calculator__form-toggles-item-pic--scheme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .calculator__form-toggles-item-pic--scheme img {

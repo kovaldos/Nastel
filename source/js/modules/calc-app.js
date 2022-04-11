@@ -12,6 +12,7 @@ const calcApp = () => {
     const screen0204 = calcBlock.querySelector('[data-screen="screen0204"]');
     const screen0301 = calcBlock.querySelector('[data-screen="screen0301"]');
     const screen0302 = calcBlock.querySelector('[data-screen="screen0302"]');
+    const screen0303 = calcBlock.querySelector('[data-screen="screen0303"]');
     const screen04 = calcBlock.querySelector('[data-screen="screen04"]');
     calcBlock.addEventListener('click', (event) => {
       let target = event.target;
@@ -28,15 +29,15 @@ const calcApp = () => {
         const dataLength = calcBlock.querySelector('[data-size="length"] input');
         const dataWidth = calcBlock.querySelector('[data-size="width"] input');
         const dataBuildingType = calcBlock.querySelector('input[name="building-age"]:checked').value;
-        const dataWorkType = calcBlock.querySelectorAll('input[name="type-of-work"]:checked');
+        // const dataWorkType = calcBlock.querySelectorAll('input[name="type-of-work"]:checked');
 
-        const getDataWorkTypeValue = () => {
-          let result = [];
-          dataWorkType.forEach((item) => {
-            result.push(item.value);
-          });
-          return result;
-        };
+        // const getDataWorkTypeValue = () => {
+        //   let result = [];
+        //   dataWorkType.forEach((item) => {
+        //     result.push(item.value);
+        //   });
+        //   return result;
+        // };
         if (dataLength.value === '' && dataWidth.value === '') {
           dataLength.closest('.custom-input').classList.add('is-invalid');
           dataWidth.closest('.custom-input').classList.add('is-invalid');
@@ -71,8 +72,12 @@ const calcApp = () => {
       if (target.dataset.submit === 'further0201') {
         setTimeout(() => {
           removeScreen(screen0201);
-          screen0301.querySelector('.calculator__form-title-marker').innerText = '5. ';
-          showScreen(screen0301);
+          if (calcBlock.querySelector('#warm-sliding').checked === true || calcBlock.querySelector('#cold-sliding').checked === true) {
+            showScreen(screen0303);
+          } else {
+            screen0301.querySelector('.calculator__form-title-marker').innerText = '5. ';
+            showScreen(screen0301);
+          }
         }, 200);
       }
       if (target.dataset.submit === 'back0301') {
@@ -93,6 +98,12 @@ const calcApp = () => {
           } else {
             showScreen(screen0202);
           }
+        }, 200);
+      }
+      if (target.dataset.submit === 'back0303') {
+        setTimeout(() => {
+          removeScreen(screen0303);
+          showScreen(screen0201);
         }, 200);
       }
       if (target.dataset.submit === 'further0202') {
@@ -156,6 +167,12 @@ const calcApp = () => {
             screen04.querySelector('.calculator__form-title-marker').innerText = '6. ';
             showScreen(screen04);
           }
+        }, 200);
+      }
+      if (target.dataset.submit === 'further0303') {
+        setTimeout(() => {
+          removeScreen(screen0303);
+          showScreen(screen04);
         }, 200);
       }
     });

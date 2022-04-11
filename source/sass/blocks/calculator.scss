@@ -230,6 +230,7 @@
 				&-pic {
 					max-width: 316px;
 					height: 190px;
+					border: 1px solid $color-whisper;
 					border-radius: 10px;
 					overflow: hidden;
 					margin-bottom: 1.06em;
@@ -244,6 +245,9 @@
 						object-fit: cover;
 					}
 					&--scheme {
+						display: flex;
+						justify-content: center;
+						align-items: center;
 						img {
 							height: auto;
 						}
