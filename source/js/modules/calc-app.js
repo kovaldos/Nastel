@@ -4,7 +4,6 @@
 const calcApp = () => {
   const calcBlock = document.querySelector('.calculator');
   if (calcBlock) {
-    // const data = [];
     const screen01 = calcBlock.querySelector('[data-screen="screen01"]');
     const screen0201 = calcBlock.querySelector('[data-screen="screen0201"]');
     const screen0202 = calcBlock.querySelector('[data-screen="screen0202"]');
@@ -28,30 +27,17 @@ const calcApp = () => {
 
         const dataLength = calcBlock.querySelector('[data-size="length"] input');
         const dataWidth = calcBlock.querySelector('[data-size="width"] input');
-        const dataBuildingType = calcBlock.querySelector('input[name="building-type"]:checked').id;
-        // const dataWorkType = calcBlock.querySelectorAll('input[name="type-of-work"]:checked');
-
-        // const getDataWorkTypeValue = () => {
-        //   let result = [];
-        //   dataWorkType.forEach((item) => {
-        //     result.push(item.value);
-        //   });
-        //   return result;
-        // };
+        const dataBuildingType = calcBlock.querySelector('input[name="Тип дома"]:checked').id;
         if (dataLength.value === '' && dataWidth.value === '') {
           dataLength.closest('.custom-input').classList.add('is-invalid');
           dataWidth.closest('.custom-input').classList.add('is-invalid');
         } else if (dataBuildingType === 'old-building') {
           setTimeout(() => {
-            // data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
-            // console.log(data);
             removeScreen(screen01);
             showScreen(screen0201);
           }, 200);
         } else {
           setTimeout(() => {
-            // data.push(dataLength.value, dataWidth.value, dataBuildingType, getDataWorkTypeValue());
-            // console.log(data);
             removeScreen(screen01);
             showScreen(screen0202);
           }, 200);
