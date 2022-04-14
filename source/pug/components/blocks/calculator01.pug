@@ -12,7 +12,7 @@ mixin calculator01 ()
 					inputPlaceholder: 3000,
 					inputError: "Укажите длину",
 					inputId: "length",
-					inputName: "Длина",
+					inputName: "length",
 					inputMinLength: 3,
 					inputMaxLength: 5,
 				},
@@ -22,7 +22,7 @@ mixin calculator01 ()
 					inputPlaceholder: 1200,
 					inputError: "Укажите ширину",
 					inputId: "width",
-					inputName: "Ширина",
+					inputName: "width",
 					inputMinLength: 3,
 					inputMaxLength: 4,
 				},
@@ -32,16 +32,16 @@ mixin calculator01 ()
 					inputLabel: "Новостройка (дома, начиная с 2010 года)",
 					inputType: "radio",
 					inputId: "new-building",
-					inputValue: "new-building",
-					inputName: "building-age",
+					inputValue: "Новостройка (дома, начиная с 2010 года)",
+					inputName: "building-type",
 				},
 				toggleRadio02: {
 					inputLabel: "Старый дом (дома старше 2010 года)",
 					inputType: "radio",
 					inputId: "old-building",
-					inputValue: "old-building",
-					inputName: "building-age",
-					inputChecked: "checked",
+					inputValue: "Старый дом (дома старше 2010 года)",
+					inputName: "building-type",
+					inputChecked: true,
 				},
 				marker03: "3. ",
 				title03: "Выберите тип работ",
@@ -49,7 +49,7 @@ mixin calculator01 ()
 					inputLabel: "Остекление балкона",
 					inputType: "checkbox",
 					inputId: "glazing",
-					inputValue: "glazing",
+					inputValue: "Остекление балкона",
 					inputName: "type-of-work",
 					inputChecked: true,
 				},
@@ -57,7 +57,7 @@ mixin calculator01 ()
 					inputLabel: "Отделка балкона",
 					inputType: "checkbox",
 					inputId: "balcony-decoration",
-					inputValue: "balcony-decoration",
+					inputValue: "Отделка балкона",
 					inputName: "type-of-work",
 				},
 				btnFurther: {
@@ -71,28 +71,28 @@ mixin calculator01 ()
 		h1.calculator__title=data.title
 		p.calculator__text=data.titleText
 		.calculator__wrapper(data-screen="screen01")
-			.calculator__form(data-validate)
-				form.calculator__form-form#calculatorForm(action="#")
-					fieldset(form="calculatorForm").calculator__form-fieldset
-						legend.calculator__form-title
-							span.calculator__form-title-marker=data.form.marker01 
-							span.calculator__form-title-inner=data.form.title01
-						.calculator__form-inputs.calculator__form-inputs--flex
-							+custom-input(data.form.input01)(data-validate-type="text" data-limitations="digit" data-size="length")
-							+custom-input(data.form.input02)(data-validate-type="text" data-limitations="digit" data-size="width")
-					fieldset(form="calculatorForm").calculator__form-fieldset
-						legend.calculator__form-title
-							span.calculator__form-title-marker=data.form.marker02
-							span.calculator__form-title-inner=data.form.title02
-						+custom-toggle(data.form.toggleRadio01).custom-toggle--radio.radio-dot(data-building-age="new")
-						+custom-toggle(data.form.toggleRadio02).custom-toggle--radio.radio-dot(data-building-age="old")
-					fieldset(form="calculatorForm").calculator__form-fieldset
-						legend.calculator__form-title
-							span.calculator__form-title-marker=data.form.marker03
-							span.calculator__form-title-inner=data.form.title03
-						.calculator__form-toggle-group(data-validate-type="toggle-group")
-							+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
-							+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
-						+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
+			.calculator__form
+				//- form.calculator__form-form#calculatorForm01(action="#")
+				fieldset.calculator__form-fieldset(form="calculatorForm")
+					legend.calculator__form-title
+						span.calculator__form-title-marker=data.form.marker01 
+						span.calculator__form-title-inner=data.form.title01
+					.calculator__form-inputs.calculator__form-inputs--flex
+						+custom-input(data.form.input01)(data-validate-type="text" data-limitations="digit" data-size="length")
+						+custom-input(data.form.input02)(data-validate-type="text" data-limitations="digit" data-size="width")
+				fieldset.calculator__form-fieldset
+					legend.calculator__form-title
+						span.calculator__form-title-marker=data.form.marker02
+						span.calculator__form-title-inner=data.form.title02
+					+custom-toggle(data.form.toggleRadio01).custom-toggle--radio.radio-dot(data-building-age="new")
+					+custom-toggle(data.form.toggleRadio02).custom-toggle--radio.radio-dot(data-building-age="old")
+				fieldset.calculator__form-fieldset
+					legend.calculator__form-title
+						span.calculator__form-title-marker=data.form.marker03
+						span.calculator__form-title-inner=data.form.title03
+					.calculator__form-toggle-group(data-validate-type="toggle-group")
+						+custom-toggle(data.form.toggleCheck01).custom-toggle--checkbox
+						+custom-toggle(data.form.toggleCheck02).custom-toggle--checkbox
+					+btn(data.form.btnFurther)(data-submit="further01").calculator__form-btn.calculator__form-btn--further
 			.calculator__form-pic
 				+picture("content", "calculator-bg-img", "png", "100%", "100%", "Электронный калькулятор лежит на бумаге с расчётами")

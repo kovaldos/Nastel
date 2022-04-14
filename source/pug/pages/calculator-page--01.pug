@@ -14,15 +14,17 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     section.calculator
-      +calculator01()
-      +calculator02-01()
-      +calculator02-02()
-      +calculator02-03()
-      +calculator02-04()
-      +calculator03-01()
-      +calculator03-02()
-      +calculator03-03()
-      +calculator04()
+      .calculator__form-wrapper(data-validate)
+        form.calculator__form-form#calculatorForm(action="#")
+          +calculator01()
+          +calculator02-01()
+          +calculator02-02()
+          +calculator02-03()
+          +calculator02-04()
+          +calculator03-01()
+          +calculator03-02()
+          +calculator03-03()
+          +calculator04()
 block modals
   +modal("modal--calc-form")(data-modal="modal-calc-form")
     +modal-calc-form()

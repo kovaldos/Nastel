@@ -16,629 +16,629 @@
     <div class="wrapper">
       <main>
         <section class="calculator">
-          <div class="container calculator__container">
-            <h1 class="calculator__title">Калькулятор</h1>
-            <p class="calculator__text">Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.</p>
-            <div class="calculator__wrapper" data-screen="screen01">
-              <div class="calculator__form" data-validate>
-                <form class="calculator__form-form" id="calculatorForm" action="#">
-                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">1. </span><span class="calculator__form-title-inner">Укажите размер пола на балконе (мм)</span></legend>
-                    <div class="calculator__form-inputs calculator__form-inputs--flex">
-                      <div class="custom-input" data-validate-type="text" data-limitations="digit" data-size="length">
-                        <label><span class="custom-input__label">Длина</span>
-                          <input type="text" id="length" name="Длина" minlength="3" maxlength="5" placeholder="3000">
-                        </label>
-                        <div class="custom-input__error">Укажите длину</div>
+          <div class="calculator__form-wrapper" data-validate>
+            <form class="calculator__form-form" id="calculatorForm" action="#">
+              <div class="container calculator__container">
+                <h1 class="calculator__title">Калькулятор</h1>
+                <p class="calculator__text">Заполните данные, и мы отправим Вам подробный расчёт удобным для Вас способом в течение 1 рабочего дня.</p>
+                <div class="calculator__wrapper" data-screen="screen01">
+                  <div class="calculator__form">
+                    <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                      <legend class="calculator__form-title"><span class="calculator__form-title-marker">1. </span><span class="calculator__form-title-inner">Укажите размер пола на балконе (мм)</span></legend>
+                      <div class="calculator__form-inputs calculator__form-inputs--flex">
+                        <div class="custom-input" data-validate-type="text" data-limitations="digit" data-size="length">
+                          <label><span class="custom-input__label">Длина</span>
+                            <input type="text" id="length" name="length" minlength="3" maxlength="5" placeholder="3000">
+                          </label>
+                          <div class="custom-input__error">Укажите длину</div>
+                        </div>
+                        <div class="custom-input" data-validate-type="text" data-limitations="digit" data-size="width">
+                          <label><span class="custom-input__label">Ширина</span>
+                            <input type="text" id="width" name="width" minlength="3" maxlength="4" placeholder="1200">
+                          </label>
+                          <div class="custom-input__error">Укажите ширину</div>
+                        </div>
                       </div>
-                      <div class="custom-input" data-validate-type="text" data-limitations="digit" data-size="width">
-                        <label><span class="custom-input__label">Ширина</span>
-                          <input type="text" id="width" name="Ширина" minlength="3" maxlength="4" placeholder="1200">
+                    </fieldset>
+                    <fieldset class="calculator__form-fieldset">
+                      <legend class="calculator__form-title"><span class="calculator__form-title-marker">2. </span><span class="calculator__form-title-inner">Выберите тип дома</span></legend>
+                      <div class="custom-toggle custom-toggle--radio radio-dot" data-building-age="new">
+                        <label>
+                          <input type="radio" id="new-building" value="Новостройка (дома, начиная с 2010 года)" name="building-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Новостройка (дома, начиная с 2010 года)</span>
                         </label>
-                        <div class="custom-input__error">Укажите ширину</div>
+                      </div>
+                      <div class="custom-toggle custom-toggle--radio radio-dot" data-building-age="old">
+                        <label>
+                          <input type="radio" id="old-building" value="Старый дом (дома старше 2010 года)" name="building-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Старый дом (дома старше 2010 года)</span>
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="calculator__form-fieldset">
+                      <legend class="calculator__form-title"><span class="calculator__form-title-marker">3. </span><span class="calculator__form-title-inner">Выберите тип работ</span></legend>
+                      <div class="calculator__form-toggle-group" data-validate-type="toggle-group">
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" id="glazing" value="Остекление балкона" name="type-of-work" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Остекление балкона</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" id="balcony-decoration" value="Отделка балкона" name="type-of-work"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отделка балкона</span>
+                          </label>
+                        </div>
+                      </div>
+                      <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further01">Далее</button>
+                    </fieldset>
+                  </div>
+                  <div class="calculator__form-pic">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/calculator-bg-img.webp, img/content/calculator-bg-img@2x.webp 2x"><img src="img/content/calculator-bg-img.png" srcset="img/content/calculator-bg-img@2x.png 2x" width="100%" height="100%" alt="Электронный калькулятор лежит на бумаге с расчётами">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0201">
+                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">4. </span><span class="calculator__form-title-inner">Выберите тип остекления</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-01.webp, img/content/glazing-type-img-01@2x.webp 2x"><img src="img/content/glazing-type-img-01.jpg" srcset="img/content/glazing-type-img-01@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="warm-tilt-and-turn" value="Тёплое поворотно откидное остекление" name="glazing-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое поворотно откидное остекление</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-02.webp, img/content/glazing-type-img-02@2x.webp 2x"><img src="img/content/glazing-type-img-02.jpg" srcset="img/content/glazing-type-img-02@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="warm-sliding" value="Тёплое раздвижное остекление" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое раздвижное остекление</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-03.webp, img/content/glazing-type-img-03@2x.webp 2x"><img src="img/content/glazing-type-img-03.jpg" srcset="img/content/glazing-type-img-03@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="cold-sliding" value="Холодное раздвижное остекление" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Холодное раздвижное остекление</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0201">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0201">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
                       </div>
                     </div>
                   </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0202">
                   <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">2. </span><span class="calculator__form-title-inner">Выберите тип дома</span></legend>
-                    <div class="custom-toggle custom-toggle--radio radio-dot" data-building-age="new">
-                      <label>
-                        <input type="radio" id="new-building" value="new-building" name="building-age"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Новостройка (дома, начиная с 2010 года)</span>
-                      </label>
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">4. </span><span class="calculator__form-title-inner">Выберите тип остекления</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-04.webp, img/content/glazing-type-img-04@2x.webp 2x"><img src="img/content/glazing-type-img-04.jpg" srcset="img/content/glazing-type-img-04@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="avangard" value="Авангард (штапик внутри)" name="glazing-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Авангард (штапик внутри)</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span></span></div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-05.webp, img/content/glazing-type-img-05@2x.webp 2x"><img src="img/content/glazing-type-img-05.jpg" srcset="img/content/glazing-type-img-05@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="tatprof" value="Татпроф" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Татпроф</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Внутри нет штапика, монтаж происходит с улицы с помощью промышленных альпинистов.</span></div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/glazing-type-img-06.webp, img/content/glazing-type-img-06@2x.webp 2x"><img src="img/content/glazing-type-img-06.jpg" srcset="img/content/glazing-type-img-06@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="free-standing-glazing" value="Отдельностоящее остекление" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отдельностоящее остекление</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Остекление, не связанное единым стояком. Происходит полный демонтаж старого остекления и монтируется новое.</span></div>
+                      </div>
                     </div>
-                    <div class="custom-toggle custom-toggle--radio radio-dot" data-building-age="old">
-                      <label>
-                        <input type="radio" id="old-building" value="old-building" name="building-age" checked="checked"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Старый дом (дома старше 2010 года)</span>
-                      </label>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0202">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0202">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
                     </div>
                   </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0203">
                   <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">3. </span><span class="calculator__form-title-inner">Выберите тип работ</span></legend>
-                    <div class="calculator__form-toggle-group" data-validate-type="toggle-group">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите технологию</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/tech-type-img-01.webp, img/content/tech-type-img-01@2x.webp 2x"><img src="img/content/tech-type-img-01.jpg" srcset="img/content/tech-type-img-01@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="Framed" value="В рамах" name="technology-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В рамах</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, в образовавшиеся проёмы устанавливаются рамы со стеклопакетами. Происходит сужение световых проёмов.</span></div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/tech-type-img-02.webp, img/content/tech-type-img-02@2x.webp 2x"><img src="img/content/tech-type-img-02.jpg" srcset="img/content/tech-type-img-02@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="double-glazed" value="В стеклопакетах" name="technology-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В стеклопакетах</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, на места глухих стёкол устанавливаются стеклопакеты, на места створок — рамы со стеклопакетом. Ширина световых проёмов не изменяется (кроме секций со створкой).</span></div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0203">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0203">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0204">
+                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите технологию</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/tech-type-img-03.webp, img/content/tech-type-img-03@2x.webp 2x"><img src="img/content/tech-type-img-03.jpg" srcset="img/content/tech-type-img-03@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="Framed" value="В рамах" name="technology-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В рамах</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, в образовавшиеся проёмы устанавливаются рамы со стеклопакетами. Происходит сужение световых проёмов.</span></div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/tech-type-img-04.webp, img/content/tech-type-img-04@2x.webp 2x"><img src="img/content/tech-type-img-04.jpg" srcset="img/content/tech-type-img-04@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="double-glazed" value="В стеклопакетах" name="technology-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В стеклопакетах</span>
+                          </label>
+                        </div>
+                        <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, на места глухих стёкол устанавливаются стеклопакеты, на места створок — рамы со стеклопакетом. Ширина световых проёмов не изменяется (кроме секций со створкой).</span></div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0204">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0204">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0301">
+                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-01.webp, img/content/location-type-img-01@2x.webp 2x"><img src="img/content/location-type-img-01.png" srcset="img/content/location-type-img-01@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-floor-to-ceiling" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-02.webp, img/content/location-type-img-02@2x.webp 2x"><img src="img/content/location-type-img-02.png" srcset="img/content/location-type-img-02@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-waist-to-ceiling" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-03.webp, img/content/location-type-img-03@2x.webp 2x"><img src="img/content/location-type-img-03.png" srcset="img/content/location-type-img-03@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-floor-to-ceiling" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-04.webp, img/content/location-type-img-04@2x.webp 2x"><img src="img/content/location-type-img-04.png" srcset="img/content/location-type-img-04@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-waist-to-ceiling" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-05.webp, img/content/location-type-img-05@2x.webp 2x"><img src="img/content/location-type-img-05.png" srcset="img/content/location-type-img-05@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-floor-to-ceiling" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-06.webp, img/content/location-type-img-06@2x.webp 2x"><img src="img/content/location-type-img-06.png" srcset="img/content/location-type-img-06@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-waist-to-ceiling" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0301">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0301">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0302">
+                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-01.webp, img/content/location-type-img-01@2x.webp 2x"><img src="img/content/location-type-img-01.png" srcset="img/content/location-type-img-01@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-floor-to-ceiling" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-02.webp, img/content/location-type-img-02@2x.webp 2x"><img src="img/content/location-type-img-02.png" srcset="img/content/location-type-img-02@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-waist-to-ceiling" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-03.webp, img/content/location-type-img-03@2x.webp 2x"><img src="img/content/location-type-img-03.png" srcset="img/content/location-type-img-03@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-floor-to-ceiling" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-04.webp, img/content/location-type-img-04@2x.webp 2x"><img src="img/content/location-type-img-04.png" srcset="img/content/location-type-img-04@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-waist-to-ceiling" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-05.webp, img/content/location-type-img-05@2x.webp 2x"><img src="img/content/location-type-img-05.png" srcset="img/content/location-type-img-05@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-floor-to-ceiling" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-06.webp, img/content/location-type-img-06@2x.webp 2x"><img src="img/content/location-type-img-06.png" srcset="img/content/location-type-img-06@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-waist-to-ceiling" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0302">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0302">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen0303">
+                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                    <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
+                    <div class="calculator__form-toggles">
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-07.webp, img/content/location-type-img-07@2x.webp 2x"><img src="img/content/location-type-img-07.png" srcset="img/content/location-type-img-07@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-floor-to-ceiling-02" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-08.webp, img/content/location-type-img-08@2x.webp 2x"><img src="img/content/location-type-img-08.png" srcset="img/content/location-type-img-08@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="straight-waist-to-ceiling-02" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-09.webp, img/content/location-type-img-09@2x.webp 2x"><img src="img/content/location-type-img-09.png" srcset="img/content/location-type-img-09@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-floor-to-ceiling-02" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-10.webp, img/content/location-type-img-10@2x.webp 2x"><img src="img/content/location-type-img-10.png" srcset="img/content/location-type-img-10@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="L-type-waist-to-ceiling-02" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-11.webp, img/content/location-type-img-11@2x.webp 2x"><img src="img/content/location-type-img-11.png" srcset="img/content/location-type-img-11@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-floor-to-ceiling-02" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="calculator__form-toggles-item">
+                        <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
+                          <picture>
+                            <source type="image/webp" srcset="img/content/location-type-img-12.webp, img/content/location-type-img-12@2x.webp 2x"><img src="img/content/location-type-img-12.png" srcset="img/content/location-type-img-12@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
+                          </picture>
+                        </div>
+                        <div class="custom-toggle custom-toggle--radio radio-check">
+                          <label>
+                            <input type="radio" id="U-type-waist-to-ceiling-02" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator__form-row">
+                      <div class="calculator__form-btns">
+                        <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0303">Назад</button>
+                        <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0303">Далее</button>
+                      </div>
+                      <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
+                        <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
+                        <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="container calculator__container">
+                <div class="calculator__wrapper is-hidden" data-screen="screen04">
+                  <div class="calculator__form">
+                    <fieldset class="calculator__form-fieldset" form="calculatorForm">
+                      <legend class="calculator__form-title"><span class="calculator__form-title-marker calculator__form-title-marker--orange">6. </span><span class="calculator__form-title-inner calculator__form-title-inner--orange">Данные собраны! </span><span class="calculator__form-title-inner">Мы подготовим и отправим расчёт в течение рабочего дня.</span></legend>
+                      <p class="calculator__form-sub-title">Где Вам удобнее получить расчёт?</p>
                       <div class="custom-toggle custom-toggle--checkbox">
                         <label>
-                          <input type="checkbox" id="glazing" value="glazing" name="type-of-work" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Остекление балкона</span>
+                          <input type="checkbox" id="calc-form-connection-email" value="email" name="connection" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Электронная почта</span>
                         </label>
                       </div>
                       <div class="custom-toggle custom-toggle--checkbox">
                         <label>
-                          <input type="checkbox" id="balcony-decoration" value="balcony-decoration" name="type-of-work"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отделка балкона</span>
+                          <input type="checkbox" id="calc-form-connection-whatsApp" value="whatsApp" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">WhatsApp</span>
                         </label>
                       </div>
-                    </div>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further01">Далее</button>
-                  </fieldset>
-                </form>
-              </div>
-              <div class="calculator__form-pic">
-                <picture>
-                  <source type="image/webp" srcset="img/content/calculator-bg-img.webp, img/content/calculator-bg-img@2x.webp 2x"><img src="img/content/calculator-bg-img.png" srcset="img/content/calculator-bg-img@2x.png 2x" width="100%" height="100%" alt="Электронный калькулятор лежит на бумаге с расчётами">
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0201">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">4. </span><span class="calculator__form-title-inner">Выберите тип остекления</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-01.webp, img/content/glazing-type-img-01@2x.webp 2x"><img src="img/content/glazing-type-img-01.jpg" srcset="img/content/glazing-type-img-01@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="warm-tilt-and-turn" value="warm-tilt-and-turn" name="glazing-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое поворотно откидное остекление</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-02.webp, img/content/glazing-type-img-02@2x.webp 2x"><img src="img/content/glazing-type-img-02.jpg" srcset="img/content/glazing-type-img-02@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="warm-sliding" value="warm-sliding" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Тёплое раздвижное остекление</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-03.webp, img/content/glazing-type-img-03@2x.webp 2x"><img src="img/content/glazing-type-img-03.jpg" srcset="img/content/glazing-type-img-03@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="cold-sliding" value="cold-sliding" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Холодное раздвижное остекление</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0201">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0201">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0202">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">4. </span><span class="calculator__form-title-inner">Выберите тип остекления</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-04.webp, img/content/glazing-type-img-04@2x.webp 2x"><img src="img/content/glazing-type-img-04.jpg" srcset="img/content/glazing-type-img-04@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="avangard" value="avangard" name="glazing-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Авангард (штапик внутри)</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span></span></div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-05.webp, img/content/glazing-type-img-05@2x.webp 2x"><img src="img/content/glazing-type-img-05.jpg" srcset="img/content/glazing-type-img-05@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="tatprof" value="tatprof" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Татпроф</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Внутри нет штапика, монтаж происходит с улицы с помощью промышленных альпинистов.</span></div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/glazing-type-img-06.webp, img/content/glazing-type-img-06@2x.webp 2x"><img src="img/content/glazing-type-img-06.jpg" srcset="img/content/glazing-type-img-06@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="free-standing-glazing" value="free-standing-glazing" name="glazing-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Отдельностоящее остекление</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Остекление, не связанное единым стояком. Происходит полный демонтаж старого остекления и монтируется новое.</span></div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0202">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0202">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0203">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите технологию</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/tech-type-img-01.webp, img/content/tech-type-img-01@2x.webp 2x"><img src="img/content/tech-type-img-01.jpg" srcset="img/content/tech-type-img-01@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="Framed" value="Framed" name="technology-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В рамах</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, в образовавшиеся проёмы устанавливаются рамы со стеклопакетами. Происходит сужение световых проёмов.</span></div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/tech-type-img-02.webp, img/content/tech-type-img-02@2x.webp 2x"><img src="img/content/tech-type-img-02.jpg" srcset="img/content/tech-type-img-02@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="double-glazed" value="double-glazed" name="technology-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В стеклопакетах</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, на места глухих стёкол устанавливаются стеклопакеты, на места створок — рамы со стеклопакетом. Ширина световых проёмов не изменяется (кроме секций со створкой).</span></div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0203">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0203">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0204">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите технологию</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/tech-type-img-03.webp, img/content/tech-type-img-03@2x.webp 2x"><img src="img/content/tech-type-img-03.jpg" srcset="img/content/tech-type-img-03@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="Framed" value="Framed" name="technology-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В рамах</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, в образовавшиеся проёмы устанавливаются рамы со стеклопакетами. Происходит сужение световых проёмов.</span></div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/tech-type-img-04.webp, img/content/tech-type-img-04@2x.webp 2x"><img src="img/content/tech-type-img-04.jpg" srcset="img/content/tech-type-img-04@2x.jpg 2x" width="100%" height="100%" alt="Фото остекления балкона">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="double-glazed" value="double-glazed" name="technology-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">В стеклопакетах</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-toggles-item-text"><span>Демонтируются створки и стёкла, остаётся скелет старого остекления, на места глухих стёкол устанавливаются стеклопакеты, на места створок — рамы со стеклопакетом. Ширина световых проёмов не изменяется (кроме секций со створкой).</span></div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0204">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0204">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0301">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-01.webp, img/content/location-type-img-01@2x.webp 2x"><img src="img/content/location-type-img-01.png" srcset="img/content/location-type-img-01@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-floor-to-ceiling" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-02.webp, img/content/location-type-img-02@2x.webp 2x"><img src="img/content/location-type-img-02.png" srcset="img/content/location-type-img-02@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-waist-to-ceiling" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-03.webp, img/content/location-type-img-03@2x.webp 2x"><img src="img/content/location-type-img-03.png" srcset="img/content/location-type-img-03@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-floor-to-ceiling" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-04.webp, img/content/location-type-img-04@2x.webp 2x"><img src="img/content/location-type-img-04.png" srcset="img/content/location-type-img-04@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-waist-to-ceiling" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-05.webp, img/content/location-type-img-05@2x.webp 2x"><img src="img/content/location-type-img-05.png" srcset="img/content/location-type-img-05@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-floor-to-ceiling" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-06.webp, img/content/location-type-img-06@2x.webp 2x"><img src="img/content/location-type-img-06.png" srcset="img/content/location-type-img-06@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-waist-to-ceiling" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0301">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0301">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0302">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-01.webp, img/content/location-type-img-01@2x.webp 2x"><img src="img/content/location-type-img-01.png" srcset="img/content/location-type-img-01@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-floor-to-ceiling" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-02.webp, img/content/location-type-img-02@2x.webp 2x"><img src="img/content/location-type-img-02.png" srcset="img/content/location-type-img-02@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-waist-to-ceiling" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-03.webp, img/content/location-type-img-03@2x.webp 2x"><img src="img/content/location-type-img-03.png" srcset="img/content/location-type-img-03@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-floor-to-ceiling" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-04.webp, img/content/location-type-img-04@2x.webp 2x"><img src="img/content/location-type-img-04.png" srcset="img/content/location-type-img-04@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-waist-to-ceiling" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-05.webp, img/content/location-type-img-05@2x.webp 2x"><img src="img/content/location-type-img-05.png" srcset="img/content/location-type-img-05@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-floor-to-ceiling" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-06.webp, img/content/location-type-img-06@2x.webp 2x"><img src="img/content/location-type-img-06.png" srcset="img/content/location-type-img-06@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-waist-to-ceiling" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0302">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0302">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen0303">
-              <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                <legend class="calculator__form-title"><span class="calculator__form-title-marker">5. </span><span class="calculator__form-title-inner">Выберите расположение остекления</span></legend>
-                <div class="calculator__form-toggles">
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-07.webp, img/content/location-type-img-07@2x.webp 2x"><img src="img/content/location-type-img-07.png" srcset="img/content/location-type-img-07@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-floor-to-ceiling-02" value="Прямое, от пола до потолка" name="location-type" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-08.webp, img/content/location-type-img-08@2x.webp 2x"><img src="img/content/location-type-img-08.png" srcset="img/content/location-type-img-08@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="straight-waist-to-ceiling-02" value="Прямое, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Прямое, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-09.webp, img/content/location-type-img-09@2x.webp 2x"><img src="img/content/location-type-img-09.png" srcset="img/content/location-type-img-09@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-floor-to-ceiling-02" value="Г-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-10.webp, img/content/location-type-img-10@2x.webp 2x"><img src="img/content/location-type-img-10.png" srcset="img/content/location-type-img-10@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="L-type-waist-to-ceiling-02" value="Г-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Г-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-11.webp, img/content/location-type-img-11@2x.webp 2x"><img src="img/content/location-type-img-11.png" srcset="img/content/location-type-img-11@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-floor-to-ceiling-02" value="П-образное, от пола до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пола до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="calculator__form-toggles-item">
-                    <div class="calculator__form-toggles-item-pic calculator__form-toggles-item-pic--scheme"> 
-                      <picture>
-                        <source type="image/webp" srcset="img/content/location-type-img-12.webp, img/content/location-type-img-12@2x.webp 2x"><img src="img/content/location-type-img-12.png" srcset="img/content/location-type-img-12@2x.png 2x" width="100%" height="100%" alt="Схема остекления, расположения створок">
-                      </picture>
-                    </div>
-                    <div class="custom-toggle custom-toggle--radio radio-check">
-                      <label>
-                        <input type="radio" id="U-type-waist-to-ceiling-02" value="П-образное, от пояса до потолка" name="location-type"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">П-образное, от пояса до потолка</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calculator__form-row">
-                  <div class="calculator__form-btns">
-                    <button class="btn calculator__form-btn calculator__form-btn--back" type="button" data-submit="back0303">Назад</button>
-                    <button class="btn calculator__form-btn calculator__form-btn--further" type="button" data-submit="further0303">Далее</button>
-                  </div>
-                  <div class="calculator__form-help"><span class="calculator__form-help-text">Трудности с заполнением заявки?</span>
-                    <button class="btn calculator__form-help-btn" type="button" data-open-modal="modal-calc-form">Заказать звонок</button>
-                    <svg class="calculator__form-help-btn-icon" width="40" height="40" aria-hidden="true">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class="container calculator__container">
-            <div class="calculator__wrapper is-hidden" data-screen="screen04">
-              <div class="calculator__form" data-validate>
-                <form class="calculator__form-form" id="calculatorForm">
-                  <fieldset class="calculator__form-fieldset" form="calculatorForm">
-                    <legend class="calculator__form-title"><span class="calculator__form-title-marker calculator__form-title-marker--orange">6. </span><span class="calculator__form-title-inner calculator__form-title-inner--orange">Данные собраны! </span><span class="calculator__form-title-inner">Мы подготовим и отправим расчёт в течение рабочего дня.</span></legend>
-                    <p class="calculator__form-sub-title">Где Вам удобнее получить расчёт?</p>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-connection-email" value="email" name="connection" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Электронная почта</span>
-                      </label>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-connection-whatsApp" value="whatsApp" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">WhatsApp</span>
-                      </label>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-connection-viber" value="viber" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Viber</span>
-                      </label>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-connection-telegram" value="telegram" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Telegram</span>
-                      </label>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-connection-tel" value="По телефону" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">По телефону</span>
-                      </label>
-                    </div>
-                    <div class="calculator__form-inputs calculator__form-inputs--grid">
-                      <div class="custom-input" data-validate-type="text">
+                      <div class="custom-toggle custom-toggle--checkbox">
                         <label>
-                          <input type="text" id="calc-form-tel" placeholder="Номер телефона">
+                          <input type="checkbox" id="calc-form-connection-viber" value="viber" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Viber</span>
                         </label>
-                        <div class="custom-input__error">Укажите номер телефона</div>
                       </div>
-                      <div class="custom-input" data-validate-type="text">
+                      <div class="custom-toggle custom-toggle--checkbox">
                         <label>
-                          <input type="text" id="calc-form-email" placeholder="Email">
+                          <input type="checkbox" id="calc-form-connection-telegram" value="telegram" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Telegram</span>
                         </label>
-                        <div class="custom-input__error">Укажите email</div>
                       </div>
-                      <div class="custom-input" data-validate-type="text">
+                      <div class="custom-toggle custom-toggle--checkbox">
                         <label>
-                          <input type="text" id="calc-form-address" minlength="3" placeholder="Адрес / название ЖК">
+                          <input type="checkbox" id="calc-form-connection-tel" value="По телефону" name="connection"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">По телефону</span>
                         </label>
-                        <div class="custom-input__error">Укажите адрес или название ЖК</div>
                       </div>
-                      <div class="custom-input">
+                      <div class="calculator__form-inputs calculator__form-inputs--grid">
+                        <div class="custom-input" data-validate-type="phone">
+                          <label>
+                            <input type="text" id="calc-form-tel" name="Phone" placeholder="Номер телефона">
+                          </label>
+                          <div class="custom-input__error">Укажите номер телефона</div>
+                        </div>
+                        <div class="custom-input" data-validate-type="email">
+                          <label>
+                            <input type="text" id="calc-form-email" name="Email" placeholder="Email">
+                          </label>
+                          <div class="custom-input__error">Укажите email</div>
+                        </div>
+                        <div class="custom-input" data-validate-type="text">
+                          <label>
+                            <input type="text" id="calc-form-address" name="Address" minlength="3" placeholder="Адрес / название ЖК">
+                          </label>
+                          <div class="custom-input__error">Укажите адрес или название ЖК</div>
+                        </div>
+                        <div class="custom-input">
+                          <label>
+                            <input type="text" id="calc-form-comment" name="Comment" minlength="5" placeholder="Комментарий">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="custom-toggle custom-toggle--checkbox calculator__form-agreement" data-validate-type="checkbox">
                         <label>
-                          <input type="text" id="calc-form-comment" minlength="5" placeholder="Комментарий">
+                          <input type="checkbox" id="calc-form-agreement" value="Согласие на обработку персональных данных" name="calc-form-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
                         </label>
                       </div>
-                    </div>
-                    <div class="custom-toggle custom-toggle--checkbox calculator__form-agreement" data-validate-type="checkbox">
-                      <label>
-                        <input type="checkbox" id="calc-form-agreement" value="calc-form-agreement" name="calc-form-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
-                      </label>
-                    </div>
+                    </fieldset>
                     <button class="btn calculator__form-btn calculator__form-btn--submit" type="submit">Получить расчет</button>
-                  </fieldset>
-                </form>
+                  </div>
+                  <div class="calculator__form-pic">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/calculator-bg-img.webp, img/content/calculator-bg-img@2x.webp 2x"><img src="img/content/calculator-bg-img.png" srcset="img/content/calculator-bg-img@2x.png 2x" width="100%" height="100%" alt="Электронный калькулятор лежит на бумаге с расчётами">
+                    </picture>
+                  </div>
+                </div>
               </div>
-              <div class="calculator__form-pic">
-                <picture>
-                  <source type="image/webp" srcset="img/content/calculator-bg-img.webp, img/content/calculator-bg-img@2x.webp 2x"><img src="img/content/calculator-bg-img.png" srcset="img/content/calculator-bg-img@2x.png 2x" width="100%" height="100%" alt="Электронный калькулятор лежит на бумаге с расчётами">
-                </picture>
-              </div>
-            </div>
+            </form>
           </div>
         </section>
       </main>
@@ -648,25 +648,25 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <div class="modal-calc-form">
-            <div class="modal-calc-form__wrapper" data-validate>
-              <form action="#">
+            <div class="modal-calc-form__wrapper" data-validate data-callback="calcFormCallback">
+              <form id="calcFormHelp">
                 <fieldset> 
                   <legend>Оставьте свои контактные данные, и мы перезвоним Вам в течение дня.</legend>
                   <div class="custom-input" data-validate-type="text">
                     <label>
-                      <input type="text" id="modal-calc-form-name" placeholder="Имя">
+                      <input type="text" id="modal-calc-form-name" name="Имя" placeholder="Имя">
                     </label>
                     <div class="custom-input__error">Укажите имя</div>
                   </div>
                   <div class="custom-input" data-validate-type="phone">
                     <label>
-                      <input type="text" id="modal-calc-form-tel" placeholder="Номер телефона">
+                      <input type="text" id="modal-calc-form-tel" name="Номер телефона" placeholder="Номер телефона">
                     </label>
                     <div class="custom-input__error">Укажите номер телефона</div>
                   </div>
                   <div class="custom-toggle custom-toggle--checkbox modal-calc-form__agreement" data-validate-type="checkbox">
                     <label>
-                      <input type="checkbox" id="modal-calc-form-agreement" value="modal-calc-form-agreement" name="modal-calc-form-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
+                      <input type="checkbox" id="modal-calc-form-agreement" value="Согласен" name="Согласие на обработку персональных данных" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Согласие на обработку персональных данных</span>
                     </label>
                   </div>
                   <div class="modal-calc-form__btn-wrapper">

@@ -11,6 +11,12 @@ const resetForm = (form) => {
 const baseValidationSuccessCallback = (e) => {
   e.preventDefault();
   // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
+  const calcForm = document.getElementById('calculatorForm');
+  const formData = new FormData(calcForm);
+  for (let [name, value] of formData) {
+    console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
+  }
+
   resetForm(e.target);
 
 };
@@ -29,7 +35,27 @@ const customExampleValidationSuccessCallback = (e) => {
   console.log('Ваша форма успешна отправлена');
 };
 
+const calcFormHelpValidationSuccessCallback = (e) => {
+  e.preventDefault();
+
+  // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
+  const calcFormHelp = document.getElementById('calcFormHelp');
+  const formData = new FormData(calcFormHelp);
+  for (let [name, value] of formData) {
+    console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
+  }
+  resetForm(e.target);
+  // eslint-disable-next-line no-console
+  console.log('Ваша форма успешна отправлена');
+};
+
 const customExampleValidationErrorCallback = (e) => {
+  e.preventDefault();
+  // eslint-disable-next-line no-console
+  console.error('Отправка формы невозможна, заполните все обязательные поля');
+};
+
+const calcFormHelpValidationErrorCallback = (e) => {
   e.preventDefault();
   // eslint-disable-next-line no-console
   console.error('Отправка формы невозможна, заполните все обязательные поля');
@@ -44,7 +70,14 @@ const callbacks = {
   },
   customExample: {
     validationSuccessCallback: customExampleValidationSuccessCallback,
+    calcFormHelpValidationSuccessCallback,
     validationErrorCallback: customExampleValidationErrorCallback,
+  },
+  calcFormCallback: {
+    validationSuccessCallback:
+    calcFormHelpValidationSuccessCallback,
+    validationErrorCallback:
+    calcFormHelpValidationErrorCallback,
   },
 };
 

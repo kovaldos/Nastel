@@ -8,19 +8,21 @@ mixin modal-calc-form()
 					inputPlaceholder: "Имя",
 					inputError: "Укажите имя",
 					inputId: "modal-calc-form-name",
+					inputName: "Имя",
 				},
 				input02: {
 					inputType: "text",
 					inputPlaceholder: "Номер телефона",
 					inputError: "Укажите номер телефона",
 					inputId: "modal-calc-form-tel",
+					inputName: "Номер телефона",
 				},
 				toggleCheck: {
 					inputLabel: "Согласие на обработку персональных данных",
 					inputType: "checkbox",
 					inputId: "modal-calc-form-agreement",
-					inputValue: "modal-calc-form-agreement",
-					inputName: "modal-calc-form-agreement",
+					inputValue: "Согласен",
+					inputName: "Согласие на обработку персональных данных",
 					inputChecked: true,
 				},
 				btn: {
@@ -31,8 +33,8 @@ mixin modal-calc-form()
 			},
 		}
 	.modal-calc-form
-		.modal-calc-form__wrapper(data-validate)
-			form(action="#")
+		.modal-calc-form__wrapper(data-validate data-callback="calcFormCallback")
+			form#calcFormHelp
 				fieldset 
 					legend=data.title 
 					+custom-input(data.form.input01)(data-validate-type="text")

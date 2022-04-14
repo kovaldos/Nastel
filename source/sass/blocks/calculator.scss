@@ -175,7 +175,7 @@
 			&:focus-visible {
 				background-color: $color-transparent;
 				outline: 1px solid $color-cadet-blue;
-				color: $color-cadet-blue
+				color: $color-cadet-blue;
 			}
 			@include vp-424 {
 				max-width: 100%;
@@ -426,9 +426,19 @@
 				}
 			}
 		}
+		&:hover {
+			.custom-toggle__icon {
+				box-shadow: 0 0 0 2px rgba($color-cadet-blue, 0.54);
+			}
+		}
+		& input:focus-visible + {
+			.custom-toggle__icon {
+				box-shadow: 0 0 0 2px rgba($color-cadet-blue, 0.54);
+			}
+		}
 	}
-	&__wrapper[data-screen='screen01'],
-	&__wrapper[data-screen='screen04'] {
+	&__wrapper[data-screen="screen01"],
+	&__wrapper[data-screen="screen04"] {
 		.custom-toggle {
 			&__label {
 				@include vp-424 {

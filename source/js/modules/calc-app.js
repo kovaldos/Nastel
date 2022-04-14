@@ -4,7 +4,7 @@
 const calcApp = () => {
   const calcBlock = document.querySelector('.calculator');
   if (calcBlock) {
-    const data = [];
+    // const data = [];
     const screen01 = calcBlock.querySelector('[data-screen="screen01"]');
     const screen0201 = calcBlock.querySelector('[data-screen="screen0201"]');
     const screen0202 = calcBlock.querySelector('[data-screen="screen0202"]');
@@ -28,7 +28,7 @@ const calcApp = () => {
 
         const dataLength = calcBlock.querySelector('[data-size="length"] input');
         const dataWidth = calcBlock.querySelector('[data-size="width"] input');
-        const dataBuildingType = calcBlock.querySelector('input[name="building-age"]:checked').value;
+        const dataBuildingType = calcBlock.querySelector('input[name="building-type"]:checked').id;
         // const dataWorkType = calcBlock.querySelectorAll('input[name="type-of-work"]:checked');
 
         // const getDataWorkTypeValue = () => {
