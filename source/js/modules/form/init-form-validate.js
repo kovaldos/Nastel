@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
+import {modals} from '../modals/init-modals';
 import FormsValidate from './form-validate';
+
 const formWrappers = document.querySelectorAll('[data-validate]');
 
 const resetForm = (form) => {
@@ -16,7 +18,7 @@ const baseValidationSuccessCallback = (e) => {
   for (let [name, value] of formData) {
     console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
   }
-
+  modals.open('modal-success');
   resetForm(e.target);
 
 };
@@ -44,6 +46,7 @@ const calcFormHelpValidationSuccessCallback = (e) => {
   for (let [name, value] of formData) {
     console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
   }
+  modals.open('modal-success');
   resetForm(e.target);
   // eslint-disable-next-line no-console
   console.log('Ваша форма успешна отправлена');

@@ -637,7 +637,7 @@ button,
   transition: none !important;
 }
 
-.container {
+.c-container {
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
@@ -1867,7 +1867,7 @@ button,
 }
 
 @media (max-width: 1439px) {
-  .container {
+  .c-container {
     padding: 0 32px;
   }
 }
@@ -1879,7 +1879,7 @@ button,
 }
 
 @media (max-width: 1023px) {
-  .container {
+  .c-container {
     padding: 0 24px;
   }
 
@@ -1894,7 +1894,7 @@ button,
     font-size: 16px;
   }
 
-  .container {
+  .c-container {
     max-width: 632px;
     padding: 0 16px;
   }
